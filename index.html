@@ -212,18 +212,17 @@ nav .brand:hover .brand-text {
 <!-- NAVBAR -->
 <!-- NAVBAR -->
 <nav>
-    <a href="#" class="brand">
-    <img src="logo.png" alt="ConnectEd Logo">
-    <span class="brand-text">ConnectEd</span>
-</a>
-
+    <a href="https://fuhrerahro.github.io/etonatalaga/" class="brand">
+        <img src="logo.png" alt="ConnectEd Logo">
+        <span class="brand-text">ConnectEd</span>
+    </a>
 
     <div class="nav-links">
-        <a href="#">Home</a>
+        <a href="https://fuhrerahro.github.io/etonatalaga/">Home</a>
         <a href="#peopleGrid">Explore</a>
 
         <div class="dropdown">
-            <button id="categoriesBtn">Categories ▼</button>
+            <button id="categoriesBtn" type="button">Categories ▼</button>
             <div id="categoriesDropdown" class="dropdown-menu">
                 <a href="#">Web Development</a>
                 <a href="#">Data Science</a>
@@ -235,18 +234,14 @@ nav .brand:hover .brand-text {
         <a href="#form">Apply</a>
 
         <div class="dropdown">
-            <button id="mentorsBtn">Mentors ▼</button>
+            <button id="mentorsBtn" type="button">Mentors ▼</button>
             <div id="mentorsDropdown" class="dropdown-menu"></div>
         </div>
 
-        <a
-          href="https://your-login-site.com"
-          class="login-btn"
-        >
-          Login
-        </a>
+        <a href="https://your-login-site.com" class="login-btn">Login</a>
     </div>
 </nav>
+
 
 
 <div class="container">
@@ -543,6 +538,14 @@ document.addEventListener("click", (e) => {
     }
 });
 
+</script>
+<script>
+/* FIX NAVBAR LINKS CLICK ISSUE */
+document.querySelectorAll("nav a, nav button").forEach(el => {
+    el.addEventListener("click", function (e) {
+        e.stopPropagation();
+    });
+});
 </script>
 
 </body>
